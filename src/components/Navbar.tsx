@@ -1,4 +1,8 @@
+'use client';
+
 import { Calculator, Menu, X, Home } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
@@ -12,12 +16,11 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
-
+  const pathname = usePathname();  
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container flex items-center justify-between h-14">
-        <Link to="/" className="flex items-center gap-2 font-bold text-foreground shrink-0">
+        <Link href="/" className="flex items-center gap-2 font-bold text-foreground shrink-0">
           <Calculator className="h-5 w-5 text-primary" />
           <span className="hidden xs:inline">miCalculadora.es</span>
           <span className="xs:hidden">miCalculadora</span>
@@ -28,9 +31,9 @@ export default function Navbar() {
           {links.map((l) => (
             <Link
               key={l.href}
-              to={l.href}
+              href={l.href}
               className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
-                location.pathname === l.href
+                pathname === l.href
                   ? "bg-primary/10 text-primary font-medium"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
               }`}
@@ -57,10 +60,10 @@ export default function Navbar() {
             {links.map((l) => (
               <Link
                 key={l.href}
-                to={l.href}
+                href={l.href}
                 onClick={() => setOpen(false)}
                 className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-                  location.pathname === l.href
+                  pathname === l.href
                     ? "bg-primary/10 text-primary font-medium"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}

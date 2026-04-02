@@ -1,5 +1,7 @@
+'use client';
 import type { Metadata } from "next";
-import { CalculadoraNomina } from "@/components/calculadoras/CalculadoraNomina";
+import CalculadoraNomina from "@/components/CalculadoraNomina";
+import { use } from "react";
 
 export const metadata: Metadata = {
   title: "Calculadora de Nómina: Bruto a Neto 2025",

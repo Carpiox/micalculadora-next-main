@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 // El componente de la calculadora viene de components/calculadoras/
 // donde tiene 'use client' porque usa useState/useForm
-import { CalculadoraFinquito } from "@/components/calculadoras/CalculadoraFinquito";
+import CalculadoraFinquito from "@/components/CalculadoraFiniquito";
 export const metadata: Metadata = {
   title: "Calculadora de Finiquito 2025",
   description:

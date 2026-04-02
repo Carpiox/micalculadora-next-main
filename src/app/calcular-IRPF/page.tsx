@@ -1,5 +1,6 @@
+'use client';
 import type { Metadata } from "next";
-import { CalculadoraIRPF } from "@/components/calculadoras/CalculadoraIRPF";
+import  CalculadoraIRPF  from "@/components/CalculadoraIRPF";
 
 export const metadata: Metadata = {
   title: "Calculadora de Retención IRPF 2025",

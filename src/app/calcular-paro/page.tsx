@@ -1,5 +1,6 @@
+'use client';
 import type { Metadata } from "next";
-import { CalculadoraParo } from "@/components/calculadoras/CalculadoraParo";
+import  CalculadoraParo  from "@/components/CalculadoraParo";
 
 export const metadata: Metadata = {
   title: "Calculadora de Paro (Prestación por Desempleo) 2025",

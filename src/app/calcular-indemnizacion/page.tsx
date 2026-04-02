@@ -1,6 +1,6 @@
 'use client';
 import type { Metadata } from "next";
-import { CalculadoraIndemnizacion } from "@/components/calculadoras/CalculadoraIndemnizacion";
+import  CalculadoraIndemnizacion  from "@/components/CalculadoraIndemnizacion";
 
 export const metadata: Metadata = {
   title: "Calculadora de Indemnización por Despido 2025",
