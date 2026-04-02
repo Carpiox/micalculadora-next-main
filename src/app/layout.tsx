@@ -1,6 +1,7 @@
 // ✅ Server Component (NO 'use client' aquí — necesario para export metadata)
 import type { Metadata } from "next";
 import "./globals.css";
+
 //import { Providers } from "@/components/providers";
 
 // ─── Metadata global del sitio ────────────────────────────────────────────
@@ -74,6 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {children}
       </body>
     </html>
   );
